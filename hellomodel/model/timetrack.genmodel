@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/hellomodel/src" modelPluginID="hellomodel" modelName="Timetrack"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    runtimePlatform="RCP">
+  <foreignModel>timetrack.ecore</foreignModel>
+  <genPackages prefix="Timetrack" disposableProviderFactory="true" ecorePackage="timetrack.ecore#/">
+    <genClasses ecoreClass="timetrack.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//User/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//User/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//User/sap_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//User/sap_password"/>
+    </genClasses>
+    <genClasses ecoreClass="timetrack.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//Project/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//Project/name"/>
+    </genClasses>
+    <genClasses ecoreClass="timetrack.ecore#//TimeEntry">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference timetrack.ecore#//TimeEntry/user"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference timetrack.ecore#//TimeEntry/project"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//TimeEntry/day"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//TimeEntry/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//TimeEntry/till"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//TimeEntry/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//TimeEntry/factured"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//TimeEntry/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute timetrack.ecore#//TimeEntry/sync_date"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
